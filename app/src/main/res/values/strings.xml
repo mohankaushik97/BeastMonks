@@ -1,0 +1,10 @@
+<resources>
+    <string name="app_name">ZeroDegreeBeasts</string>
+    <string name="timer">Timer</string>
+    <string name="catelog">Catelog</string>
+    <string name="home">Home</string>
+    <string name="category">Category</string>
+    <string name="exercise">Exercise</string>
+    <string name="workout_name">Workout Name</string>
+    <string name="hello_blank_fragment">Hello blank fragment</string>
+</resources>

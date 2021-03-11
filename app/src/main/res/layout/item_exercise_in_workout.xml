@@ -1,0 +1,188 @@
+<?xml version="1.0" encoding="utf-8"?>
+<com.google.android.material.card.MaterialCardView xmlns:android="http://schemas.android.com/apk/res/android"
+    xmlns:app="http://schemas.android.com/apk/res-auto"
+    xmlns:tools="http://schemas.android.com/tools"
+    android:id="@+id/EInWParent"
+    android:layout_width="250dp"
+    android:layout_height="wrap_content"
+    android:layout_margin="10dp"
+    android:backgroundTint="#FFF9C4"
+    app:cardCornerRadius="5dp"
+    app:cardElevation="10dp">
+
+    <RelativeLayout
+        android:id="@+id/parent"
+        android:layout_width="match_parent"
+        android:layout_height="match_parent">
+
+        <RelativeLayout
+            android:id="@+id/child1"
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content">
+
+
+            <ImageView
+                android:id="@+id/imgExerciseInWorkout"
+                android:layout_width="200dp"
+                android:layout_height="200dp"
+                android:layout_alignParentTop="true"
+                android:layout_centerHorizontal="true"
+                android:layout_marginTop="16dp"
+                tools:srcCompat="@tools:sample/avatars" />
+
+            <TextView
+                android:id="@+id/txtExerciseInWorkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/imgExerciseInWorkout"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="8dp"
+                android:layout_marginTop="8dp"
+                android:text="@string/exercise" />
+
+            <TextView
+                android:id="@+id/txtCategoryInWorkout"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtExerciseInWorkout"
+                android:layout_alignParentStart="true"
+                android:layout_marginStart="16dp"
+                android:layout_marginTop="8dp"
+                android:layout_marginBottom="8dp"
+                android:text="@string/category"
+                android:textSize="11dp" />
+
+            <ImageView
+                android:id="@+id/btnDropDown"
+                android:layout_width="20dp"
+                android:layout_height="20dp"
+                android:layout_alignTop="@id/txtCategoryInWorkout"
+                android:layout_alignParentRight="true"
+                android:layout_marginEnd="8dp"
+                android:layout_marginBottom="8dp"
+                android:src="@drawable/ic_baseline_arrow_drop_down_24" />
+
+        </RelativeLayout>
+
+        <RelativeLayout
+            android:layout_width="match_parent"
+            android:layout_height="wrap_content"
+            android:layout_below="@id/child1"
+            android:layout_marginTop="8dp"
+            android:background="#B3E5FC">
+
+
+            <TextView
+                android:id="@+id/txtOldData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_marginEnd="4dp"
+                android:layout_toStartOf="@id/edtSets"
+                android:text="Prev \nData" />
+
+            <TextView
+                android:id="@+id/txtNewData"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_alignTop="@+id/txtOldData"
+                android:layout_toEndOf="@id/txtOldData"
+                android:text="New \nData" />
+
+            <TextView
+                android:id="@+id/txtSets"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@+id/txtOldData"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="8dp"
+                android:text="Sets:"
+                android:textSize="@dimen/sets_reps_text_size" />
+
+            <TextView
+                android:id="@+id/txtPrevSets"
+                android:layout_width="@dimen/edt_text_width"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/edtSets"
+                android:layout_toStartOf="@+id/edtSets"
+                android:text="xx"
+                android:textSize="@dimen/sets_reps_text_size" />
+
+            <EditText
+                android:id="@+id/edtSets"
+                android:layout_width="@dimen/edt_text_width"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/txtSets"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:textSize="@dimen/sets_reps_text_size" />
+
+            <TextView
+                android:id="@+id/txtReps"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtSets"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="8dp"
+                android:text="Reps:"
+                android:textSize="@dimen/sets_reps_text_size" />
+
+            <TextView
+                android:id="@+id/txtPrevReps"
+                android:layout_width="@dimen/edt_text_width"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/edtReps"
+                android:layout_toStartOf="@+id/edtReps"
+                android:text="xx"
+                android:textSize="@dimen/sets_reps_text_size" />
+
+            <EditText
+                android:id="@+id/edtReps"
+                android:layout_width="@dimen/edt_text_width"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/txtReps"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:textSize="@dimen/sets_reps_text_size" />
+
+            <TextView
+                android:id="@+id/txtWeight"
+                android:layout_width="wrap_content"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtReps"
+                android:layout_marginHorizontal="16dp"
+                android:layout_marginVertical="8dp"
+                android:text="Max Weight:"
+                android:textSize="@dimen/sets_reps_text_size" />
+
+            <TextView
+                android:id="@+id/txtPrevWeights"
+                android:layout_width="@dimen/edt_text_width"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/edtWeights"
+                android:layout_toStartOf="@+id/edtWeights"
+                android:text="xx"
+                android:textSize="@dimen/sets_reps_text_size" />
+
+            <EditText
+                android:id="@+id/edtWeights"
+                android:layout_width="@dimen/edt_text_width"
+                android:layout_height="wrap_content"
+                android:layout_alignBaseline="@id/txtWeight"
+                android:layout_alignParentEnd="true"
+                android:layout_marginEnd="16dp"
+                android:textSize="@dimen/sets_reps_text_size" />
+
+            <ImageView
+                android:id="@+id/btnDropUp"
+                android:layout_width="25dp"
+                android:layout_height="wrap_content"
+                android:layout_below="@id/txtWeight"
+                android:layout_centerHorizontal="true"
+                android:src="@drawable/ic_baseline_arrow_drop_up_24" />
+
+        </RelativeLayout>
+
+    </RelativeLayout>
+
+
+</com.google.android.material.card.MaterialCardView>
